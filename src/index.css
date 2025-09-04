@@ -1,0 +1,5 @@
+.characterContainer{
+    margin: auto;
+    width: 50%;
+    overflow-x: auto;
+}
