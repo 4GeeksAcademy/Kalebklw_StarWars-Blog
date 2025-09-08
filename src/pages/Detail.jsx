@@ -7,10 +7,19 @@ export const Detail = () => {
     const {id} = useParams()
 
     const getCharacterDetails = () =>{
-        fetch(store.baseUrl + "people/" + id)
+        fetch(store.baseUrl + `people/${id}`)
         .then((resp) => resp.json())
         .then((data) => console.log("Luke Details Tag: ", data))
     }
+
+    const characterProperties = () => {
+        return(
+            <div>
+
+            </div>
+        )
+    }
+
     useEffect(
         () => {
             getCharacterDetails()
@@ -19,6 +28,16 @@ export const Detail = () => {
 
     return(
         <div>detail
+
+            <p>{getCharacterDetails.properties}</p>
+
+
+
+
+
+
+
+
             <Link to="/">
                 <button 
                 type="button" 

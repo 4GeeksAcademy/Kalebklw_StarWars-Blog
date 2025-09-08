@@ -23,7 +23,7 @@ export const Home = () => {
 				type: "set-characters",
 				payload: data.results
 			})
-			
+			console.log("Character Data Tag: ", data)
 		})
 	};
 
