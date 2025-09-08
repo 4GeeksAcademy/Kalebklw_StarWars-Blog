@@ -6,14 +6,14 @@ export const Detail = () => {
     const {store, dispatch} =useGlobalReducer()
     const {id} = useParams()
 
-    const getDetails = () =>{
+    const getCharacterDetails = () =>{
         fetch(store.baseUrl + "people/" + id)
         .then((resp) => resp.json())
         .then((data) => console.log("Luke Details Tag: ", data))
     }
     useEffect(
         () => {
-            getDetails()
+            getCharacterDetails()
         }, []
     )
 

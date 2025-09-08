@@ -7,7 +7,7 @@ export const Favorites = () => {
         <div>
             <div className="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown button
+                    Favorites
                 </button>
                 <ul className="dropdown-menu">
                     {store.favorites.map((favorites) => {

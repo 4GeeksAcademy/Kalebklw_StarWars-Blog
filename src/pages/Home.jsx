@@ -11,6 +11,7 @@ export const Home = () => {
   const {store, dispatch} =useGlobalReducer()
   const [characters, setCharacters] = useState()
   const [planets, setPlanets] = useState()
+  const [vehicles, setVehicles] = useState()
 
 	const getCharacters = () => {
 		fetch(store.baseUrl + "people")
@@ -37,11 +38,25 @@ export const Home = () => {
 				payload: data.results
 			})
 		})
-	}
+	};
+
+	const getVehicles = () => {
+		fetch(store.baseUrl + "vehicles")
+		.then((resp) => {
+			return resp.json()
+		})
+		.then((data) => {
+			dispatch ({
+				type: "set-vehicles",
+				payload: data.results
+			})
+		})
+	};
 
 	useEffect(() => {
 		getCharacters()
-		
+		getPlanets()
+		getVehicles()
 	}, []
 
 	)
@@ -80,7 +95,68 @@ export const Home = () => {
 			: "Loading..."
 			}
 			</div>
+
+			<div className="my-5 planetContainer d-flex">
+				{store.planets.length > 0 ?
+				store.planets.map(
+					(planets) => {
+						return(
+							<div>
+
+								<p className="mb-0">{planets.name}</p>
+
+								<Link to= {"/detail/"+ planets.uid}>
+									<button 
+									type="button" 
+									className="btn btn-primary mt-2 mb-3">
+										click for details
+									</button>
+								</Link>
+								<button 
+								type="button" 
+								className="btn btn-primary" 
+								onClick={() => {dispatch ({type:'set-favorites', payload: planets.name})}}
+								>
+									Favorite
+								</button>
+							</div>
+						)
+					}
+				)
+			: "Loading..."
+			}
+			</div>
 			
+			<div className="my-5 vehiclesContainer d-flex">
+				{store.vehicles.length > 0 ?
+				store.vehicles.map(
+					(vehicles) => {
+						return(
+							<div>
+
+								<p className="mb-0">{vehicles.name}</p>
+
+								<Link to= {"/detail/"+ vehicles.uid}>
+									<button 
+									type="button" 
+									className="btn btn-primary mt-2 mb-3">
+										click for details
+									</button>
+								</Link>
+								<button 
+								type="button" 
+								className="btn btn-primary" 
+								onClick={() => {dispatch ({type:'set-vehicles', payload: vehicles.name})}}
+								>
+									Favorite
+								</button>
+							</div>
+						)
+					}
+				)
+			: "Loading..."
+			}
+			</div>
 
 		</div>
 	);

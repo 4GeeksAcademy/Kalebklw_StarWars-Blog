@@ -1,4 +1,16 @@
-.characterContainer{
+.characterContainer {
+    margin: auto;
+    width: 50%;
+    overflow-x: auto;
+}
+
+.planetContainer {
+    margin: auto;
+    width: 50%;
+    overflow-x: auto;
+}
+
+.vehiclesContainer {
     margin: auto;
     width: 50%;
     overflow-x: auto;

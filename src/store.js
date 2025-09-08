@@ -3,6 +3,7 @@ export const initialStore=()=>{
    baseUrl: "https://www.swapi.tech/api/",
    characters: [],
    planets: [],
+   vehicles: [],
    favorites: [],
   }
 }
@@ -16,11 +17,23 @@ export default function storeReducer(store, action = {}) {
         characters: action.payload
       };
 
-      case 'set-favorites':
+    case 'set-planets':
+      return{
+        ...store,
+        planets: action.payload
+      };
+
+      case 'set-vehicles':
         return{
           ...store,
-          favorites: [...store.favorites, action.payload]
-        }
+          vehicles: action.payload
+        };
+      
+    case 'set-favorites':
+      return{
+        ...store,
+        favorites: [...store.favorites, action.payload]
+      };
 
     default:
       throw Error('Unknown action.');
