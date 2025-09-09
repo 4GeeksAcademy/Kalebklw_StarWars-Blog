@@ -2,6 +2,7 @@ import rigoImageUrl from "../assets/img/rigo-baby.jpg";
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { characterImages } from "../assets/img/ChaImages.js";
 import './home.css'
 
 
@@ -74,7 +75,7 @@ export const Home = () => {
 						return(
 							<div>
 								<div className = "cardFoundation card">
-									<img src="..." class="card-img-top" alt="..." />
+									<img src={characterImages[characters.name]} class="card-img-top" alt="..." />
 									<div className="card-body">
 										<h5 className="card-title">{characters.name}</h5>
 										<p className="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
@@ -134,7 +135,7 @@ export const Home = () => {
 										<div>
 											<button 
 											type="button" 
-											className="btn btn-primary" 
+											className="btn btn-primary mb-3" 
 											onClick={() => {dispatch ({type:'set-favorites', payload: planets.name})}}
 											>
 												Favorite
@@ -176,7 +177,7 @@ export const Home = () => {
 										<div>
 											<button 
 											type="button" 
-											className="btn btn-primary" 
+											className="btn btn-primary mb-3" 
 											onClick={() => {dispatch ({type:'set-vehicles', payload: vehicles.name})}}
 											>
 												Favorite
