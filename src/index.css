@@ -1,3 +1,8 @@
+.cardFoundation {
+    width: 15rem;
+    margin-right: 3rem;
+}
+
 .characterContainer {
     margin: auto;
     width: 50%;

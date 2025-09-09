@@ -65,29 +65,41 @@ export const Home = () => {
 		<div className="text-center mt-5">
 
 			<h1>In A Galaxy Far Far Away...</h1>
+			
+			{/* Code For Characters */}
 			<div className="my-5 characterContainer d-flex">
 				{store.characters.length > 0 ?
 				store.characters.map(
 					(characters) => {
 						return(
 							<div>
+								<div className = "cardFoundation card">
+									<img src="..." class="card-img-top" alt="..." />
+									<div class="card-body">
+										<h5 class="card-title">{characters.name}</h5>
+										<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+										
+										<div>
+											<Link to= {"/characterdetails/"+ characters.uid}>
+												<button 
+												type="button" 
+												className="btn btn-primary mt-2 mb-3">
+													click for details
+												</button>
+											</Link>
+										</div>
 
-								<p className="mb-0">{characters.name}</p>
-
-								<Link to= {"/detail/"+ characters.uid}>
-									<button 
-									type="button" 
-									className="btn btn-primary mt-2 mb-3">
-										click for details
-									</button>
-								</Link>
-								<button 
-								type="button" 
-								className="btn btn-primary" 
-								onClick={() => {dispatch ({type:'set-favorites', payload: characters.name})}}
-								>
-									Favorite
-								</button>
+										<div>
+											<button 
+											type="button" 
+											className="btn btn-primary" 
+											onClick={() => {dispatch ({type:'set-favorites', payload: characters.name})}}
+											>
+												Favorite
+											</button>
+										</div>
+									</div>
+								</div>
 							</div>
 						)
 					}
@@ -96,6 +108,7 @@ export const Home = () => {
 			}
 			</div>
 
+			{/* Code For Planets */}
 			<div className="my-5 planetContainer d-flex">
 				{store.planets.length > 0 ?
 				store.planets.map(
@@ -105,7 +118,7 @@ export const Home = () => {
 
 								<p className="mb-0">{planets.name}</p>
 
-								<Link to= {"/detail/"+ planets.uid}>
+								<Link to= {"/planetdetails/"+ planets.uid}>
 									<button 
 									type="button" 
 									className="btn btn-primary mt-2 mb-3">
@@ -126,7 +139,8 @@ export const Home = () => {
 			: "Loading..."
 			}
 			</div>
-			
+
+			{/* Code For Vehicles */}
 			<div className="my-5 vehiclesContainer d-flex">
 				{store.vehicles.length > 0 ?
 				store.vehicles.map(
@@ -136,7 +150,7 @@ export const Home = () => {
 
 								<p className="mb-0">{vehicles.name}</p>
 
-								<Link to= {"/detail/"+ vehicles.uid}>
+								<Link to= {"/vehicledetails/"+ vehicles.uid}>
 									<button 
 									type="button" 
 									className="btn btn-primary mt-2 mb-3">
