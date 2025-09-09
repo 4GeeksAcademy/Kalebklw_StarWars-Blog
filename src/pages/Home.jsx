@@ -75,9 +75,9 @@ export const Home = () => {
 							<div>
 								<div className = "cardFoundation card">
 									<img src="..." class="card-img-top" alt="..." />
-									<div class="card-body">
-										<h5 class="card-title">{characters.name}</h5>
-										<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+									<div className="card-body">
+										<h5 className="card-title">{characters.name}</h5>
+										<p className="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
 										
 										<div>
 											<Link to= {"/characterdetails/"+ characters.uid}>
@@ -115,23 +115,33 @@ export const Home = () => {
 					(planets) => {
 						return(
 							<div>
+								<div className="cardFoundation card">
+									<img src="..." class="card-img-top" alt="..." />
 
-								<p className="mb-0">{planets.name}</p>
-
-								<Link to= {"/planetdetails/"+ planets.uid}>
-									<button 
-									type="button" 
-									className="btn btn-primary mt-2 mb-3">
-										click for details
-									</button>
-								</Link>
-								<button 
-								type="button" 
-								className="btn btn-primary" 
-								onClick={() => {dispatch ({type:'set-favorites', payload: planets.name})}}
-								>
-									Favorite
-								</button>
+									<div>
+										<h5 className="card-title">{planets.name}</h5>
+										<p className="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+										<div>
+											<Link to= {"/planetdetails/"+ planets.uid}>
+												<button 
+												type="button" 
+												className="btn btn-primary mt-2 mb-3">
+													click for details
+												</button>
+											</Link>
+										</div>
+									
+										<div>
+											<button 
+											type="button" 
+											className="btn btn-primary" 
+											onClick={() => {dispatch ({type:'set-favorites', payload: planets.name})}}
+											>
+												Favorite
+											</button>
+										</div>
+									</div>
+								</div>	
 							</div>
 						)
 					}
@@ -147,23 +157,33 @@ export const Home = () => {
 					(vehicles) => {
 						return(
 							<div>
-
-								<p className="mb-0">{vehicles.name}</p>
-
-								<Link to= {"/vehicledetails/"+ vehicles.uid}>
-									<button 
-									type="button" 
-									className="btn btn-primary mt-2 mb-3">
-										click for details
-									</button>
-								</Link>
-								<button 
-								type="button" 
-								className="btn btn-primary" 
-								onClick={() => {dispatch ({type:'set-vehicles', payload: vehicles.name})}}
-								>
-									Favorite
-								</button>
+								<div className="cardFoundation card">
+									<img src="..." class="card-img-top" alt="..." />
+									<div>
+										<h5 className="card-title">{vehicles.name}</h5>
+										<p className="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+									
+										<div>
+											<Link to= {"/vehicledetails/"+ vehicles.uid}>
+												<button 
+												type="button" 
+												className="btn btn-primary mt-2 mb-3">
+													click for details
+												</button>
+											</Link>
+										</div>
+									
+										<div>
+											<button 
+											type="button" 
+											className="btn btn-primary" 
+											onClick={() => {dispatch ({type:'set-vehicles', payload: vehicles.name})}}
+											>
+												Favorite
+											</button>
+										</div>
+									</div>
+								</div>	
 							</div>
 						)
 					}
