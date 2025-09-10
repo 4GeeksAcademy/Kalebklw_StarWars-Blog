@@ -1,6 +1,8 @@
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import { characterImages } from "../assets/img/ChaImages.js";
+
 
 export const CharacterDetails = () => {
     const {store, dispatch} =useGlobalReducer()
@@ -24,24 +26,43 @@ export const CharacterDetails = () => {
     )
 
     return(
-        <div>
-            <div className="d-flex justify-content-center">
-                <h1>{characterData.name}</h1>    
-            </div>
+        <div className="container">
 
             <div className="d-flex justify-content-center">
-                {characterData.created}
-            </div>    
+                <div className="row col-8">
+                    <img src={characterImages[CharacterDetails.name]}></img>
+                </div>
                 
-            <div>
-                {characterData.birth_year}
-            </div>
-                
-            <div>
-                {characterData.homeworld}  
+                <div className="charName row col">
+                    <h1>{characterData.name}</h1>    
+                </div>
             </div>
 
-            <div></div>
+            <div className="bottomContainer d-flex justify-content-center">
+                <div className="row col">
+                    <div>
+                        <h3>Gender:</h3>
+                        {characterData.gender}
+                    </div>    
+                </div>
+
+                <div className="row col">
+                    <h3>Physical Attributes: </h3>
+                    <div>
+                        <div>Skin Color: {characterData.skin_color}</div>
+                        <div>Hair Color: {characterData.hair_color}</div>
+                        <div>Eye Color: {characterData.eye_color}</div>
+                        <div> Height: {characterData.height}cm</div>
+                    </div>
+                </div>
+                    
+                <div className="birth row col">
+                    <h3>Birth Year:</h3>
+                    <div>
+                        {characterData.birth_year}
+                    </div>
+                </div>
+            </div>
 
 
             <Link to="/">

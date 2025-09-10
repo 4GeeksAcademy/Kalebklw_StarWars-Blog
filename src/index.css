@@ -20,3 +20,19 @@
     width: 50%;
     overflow-x: auto;
 }
+
+.charName {
+    margin-left: 1rem;
+}
+
+.bottomContainer {
+    margin-top: 3rem;
+}
+
+.birth {
+    height: 33px;
+}
+
+.planetName {
+    margin-left: 1rem;
+}

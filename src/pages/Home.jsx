@@ -119,7 +119,7 @@ export const Home = () => {
 						return(
 							<div>
 								<div className="cardFoundation card">
-									<img src={planetImages[planets.name]} class="card-img-top" />
+									<img src={planetImages[planets.name]} className="card-img-top" />
 
 									<div>
 										<h5 className="card-title">{planets.name}</h5>
