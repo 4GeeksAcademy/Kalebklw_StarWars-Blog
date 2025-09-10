@@ -3,7 +3,9 @@ import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { characterImages } from "../assets/img/ChaImages.js";
+import { planetImages } from "../assets/img/PlanetImages.js";
 import './home.css'
+import { vehicleImages } from "../assets/img/VehicleImages.js";
 
 
 
@@ -75,7 +77,7 @@ export const Home = () => {
 						return(
 							<div>
 								<div className = "cardFoundation card">
-									<img src={characterImages[characters.name]} class="card-img-top" alt="..." />
+									<img src={characterImages[characters.name]} class="card-img-top" />
 									<div className="card-body">
 										<h5 className="card-title">{characters.name}</h5>
 										<p className="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
@@ -117,7 +119,7 @@ export const Home = () => {
 						return(
 							<div>
 								<div className="cardFoundation card">
-									<img src="..." class="card-img-top" alt="..." />
+									<img src={planetImages[planets.name]} class="card-img-top" />
 
 									<div>
 										<h5 className="card-title">{planets.name}</h5>
@@ -159,7 +161,7 @@ export const Home = () => {
 						return(
 							<div>
 								<div className="cardFoundation card">
-									<img src="..." class="card-img-top" alt="..." />
+									<img src={vehicleImages[vehicles.name]} class="card-img-top" alt="..." />
 									<div>
 										<h5 className="card-title">{vehicles.name}</h5>
 										<p className="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
