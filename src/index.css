@@ -33,6 +33,14 @@
     height: 33px;
 }
 
+.informationEdit {
+    height: 33px;
+}
+
 .planetName {
+    margin-left: 1rem;
+}
+
+.vehicleName{
     margin-left: 1rem;
 }

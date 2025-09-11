@@ -1,6 +1,7 @@
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import {vehicleImages} from "../assets/img/VehicleImages.js";
 
 export const VehicleDetails = () => {
     const {store, dispatch} =useGlobalReducer()
@@ -23,9 +24,41 @@ export const VehicleDetails = () => {
     )
 
     return(
-        <div>
+        <div className="container">
 
-            <h1>{vehicleData.name}</h1>
+            <div className="d-flex justify-content-center">
+                <div className="row col-8">
+                    <img src={vehicleImages[VehicleDetails.nammvdsvDve]}></img>
+                </div>
+
+                <div className="vehicleName row col">
+                    <h1>{vehicleData.name}</h1>
+                </div>
+            </div>
+            
+            <div className="bottomContainer d-flex justify-content-center">
+                <div className="informationEdit row col">
+                    <h3>Cost:</h3>
+                    <div>{vehicleData.cost_in_credits}</div>
+                </div>
+
+                <div className="informationEdit row col">
+                    <h3>Manufacturer:</h3>
+                    <div>{vehicleData.manufacturer}</div>
+                </div>
+
+                <div className="row col">
+                    <h3>Specs:</h3>
+                    <div>Max Capacity: {vehicleData.cargo_capacity}</div>
+                    <div>Max Passengers: {vehicleData.passengers}</div>
+                    <div>Top Speed: {vehicleData.max_atmosphering_speed}</div>
+                    <div>Max Crew: {vehicleData.crew}</div>
+                    <div>Length of Vehicle: {vehicleData.length}</div>
+                    <div>Model: {vehicleData.model}</div>
+                    <div>Class: {vehicleData.vehicle_class}</div>
+                </div>
+            </div>
+
 
             <Link to={"/"}>
                 <button
