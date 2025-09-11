@@ -28,7 +28,7 @@ export const VehicleDetails = () => {
 
             <div className="d-flex justify-content-center">
                 <div className="row col-8">
-                    <img src={vehicleImages[VehicleDetails.nammvdsvDve]}></img>
+                    <img className="detailedImage" src={vehicleImages[vehicleData.name]}></img>
                 </div>
 
                 <div className="vehicleName row col">

@@ -26,7 +26,7 @@ export const PlanetDetails = () => {
             
             <div className="d-flex justify-content-center">
                 <div className="row col-8">
-                    <img src={planetImages[PlanetDetails.name]}></img>
+                    <img className="detailedImage" src={planetImages[planetData.name]}></img>
                 </div>
 
                 <div className="planetName">

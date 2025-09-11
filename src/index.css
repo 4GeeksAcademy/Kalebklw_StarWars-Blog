@@ -3,6 +3,18 @@
     margin-right: 3rem;
 }
 
+.cardImage{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.detailedImage{
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+}
+
 .characterContainer {
     margin: auto;
     width: 50%;

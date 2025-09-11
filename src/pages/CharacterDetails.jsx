@@ -30,7 +30,7 @@ export const CharacterDetails = () => {
 
             <div className="d-flex justify-content-center">
                 <div className="row col-8">
-                    <img src={characterImages[CharacterDetails.name]}></img>
+                    <img className="detailedImage" src={characterImages[characterData.name]}></img>
                 </div>
                 
                 <div className="charName row col">

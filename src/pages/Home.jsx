@@ -77,17 +77,16 @@ export const Home = () => {
 						return(
 							<div>
 								<div className = "cardFoundation card">
-									<img src={characterImages[characters.name]} class="card-img-top" />
+									<img src={characterImages[characters.name]} className="cardImage card-img-top" />
 									<div className="card-body">
 										<h5 className="card-title">{characters.name}</h5>
-										<p className="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
 										
 										<div>
 											<Link to= {"/characterdetails/"+ characters.uid}>
 												<button 
 												type="button" 
 												className="btn btn-primary mt-2 mb-3">
-													click for details
+													Learn About!
 												</button>
 											</Link>
 										</div>
@@ -119,17 +118,16 @@ export const Home = () => {
 						return(
 							<div>
 								<div className="cardFoundation card">
-									<img src={planetImages[planets.name]} className="card-img-top" />
+									<img src={planetImages[planets.name]} className="cardImage card-img-top" />
 
 									<div>
 										<h5 className="card-title">{planets.name}</h5>
-										<p className="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
 										<div>
 											<Link to= {"/planetdetails/"+ planets.uid}>
 												<button 
 												type="button" 
 												className="btn btn-primary mt-2 mb-3">
-													click for details
+													Study This Planet!
 												</button>
 											</Link>
 										</div>
@@ -161,17 +159,16 @@ export const Home = () => {
 						return(
 							<div>
 								<div className="cardFoundation card">
-									<img src={vehicleImages[vehicles.name]} class="card-img-top" alt="..." />
+									<img src={vehicleImages[vehicles.name]} className="cardImage card-img-top" alt="..." />
 									<div>
 										<h5 className="card-title">{vehicles.name}</h5>
-										<p className="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
 									
 										<div>
 											<Link to= {"/vehicledetails/"+ vehicles.uid}>
 												<button 
 												type="button" 
 												className="btn btn-primary mt-2 mb-3">
-													click for details
+													Pilot This Craft!
 												</button>
 											</Link>
 										</div>

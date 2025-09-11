@@ -1,6 +1,6 @@
 import Luke from "./Luke.webp"
 import C3P0 from "./C-3P0.webp"
-import R2 from "./R2.webp"
+import r2d2 from "./r2d2.webp"
 import darth from "./darth.webp"
 import leia from './leia.webp'
 import owen from './owen.webp'
@@ -13,7 +13,7 @@ import obi from './obi.webp'
 const characterImages = {
 		"Luke Skywalker": Luke,
 		"C-3PO": C3P0,
-        "R2-D2": R2,
+        "R2-D2": r2d2,
         "Darth Vader": darth,
         "Leia Organa": leia,
         "Owen Lars": owen,
