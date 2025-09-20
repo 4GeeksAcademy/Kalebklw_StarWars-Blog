@@ -37,6 +37,12 @@ export default function storeReducer(store, action = {}) {
           };
       
     case 'set-favorites':
+      if (store.favorites.some(fav => fav === action.payload)) {
+        const newFavorites = store.favorites.filter((favorite) => favorite !== action.payload)
+        return {...store,
+          favorites: newFavorites
+        };
+      }
       return{
         ...store,
         favorites: [...store.favorites, action.payload]

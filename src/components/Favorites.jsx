@@ -10,11 +10,10 @@ export const Favorites = () => {
                     Favorites
                 </button>
                 <ul className="dropdown-menu">
-                    {store.favorites.map((favorites) => {
+                    {store.favorites.map((favorites, index) => {
+                        console.log("DEBUG FAVORITES TAG: ", favorites)
                         return(
-                            <div>
-                                <li><a className="dropdown-item">{favorites}</a></li>
-                            </div>
+                                <li key={index}><a className="dropdown-item">{favorites}</a></li>
                         )
                     })}
                 </ul>

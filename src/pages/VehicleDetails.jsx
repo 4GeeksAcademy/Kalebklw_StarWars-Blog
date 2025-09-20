@@ -33,6 +33,7 @@ export const VehicleDetails = () => {
 
                 <div className="vehicleName row col">
                     <h1>{vehicleData.name}</h1>
+                    <p>A vehicle within the StarWars universe</p>
                 </div>
             </div>
             
@@ -59,14 +60,15 @@ export const VehicleDetails = () => {
                 </div>
             </div>
 
-
-            <Link to={"/"}>
-                <button
-                type="button"
-                className="btn btn-primary">
-                    Go Home
-                </button>
-            </Link>
+            <div className="d-flex justify-content-start">
+                <Link to={"/"}>
+                    <button
+                    type="button"
+                    className="btn btn-primary">
+                        Ride Home
+                    </button>
+                </Link>
+            </div>
         </div>
     )
 };

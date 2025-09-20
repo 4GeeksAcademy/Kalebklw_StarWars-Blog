@@ -31,6 +31,7 @@ export const PlanetDetails = () => {
 
                 <div className="planetName">
                     <h1>{planetData.name}</h1>
+                    <p>A planet within the StarWars universe</p>
                 </div>
             </div>
 
@@ -57,14 +58,16 @@ export const PlanetDetails = () => {
                 </div>
             </div>
 
-            <Link to={"/"}>
-                <button
-                type="button"
-                className="btn btn-primary"
-                >
-                    Go Home
-                </button>
-            </Link>
+            <div className="d-flex justify-content-start">
+                <Link to={"/"}>
+                    <button
+                    type="button"
+                    className="btn btn-primary"
+                    >
+                        Leave This Planet
+                    </button>
+                </Link>
+            </div>
         </div>
     )
 };
